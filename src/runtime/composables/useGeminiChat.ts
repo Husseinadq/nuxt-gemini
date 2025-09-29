@@ -1,10 +1,12 @@
-export function useGeminiChat () {
+import { useRuntimeConfig } from '#imports'
+import { ofetch as $fetch } from 'ofetch'
+export function useGeminiChat() {
   const config = useRuntimeConfig()
   const delta = ref('')
   const done = ref(false)
   let es: EventSource | null = null
 
-  async function send (promptOrMessages: any) {
+  async function send(promptOrMessages: any) {
     delta.value = ''
     done.value = false
     if (es) { es.close(); es = null }
@@ -16,6 +18,6 @@ export function useGeminiChat () {
     es.addEventListener('done', () => { done.value = true; es?.close() })
   }
 
-  function cancel () { if (es) { es.close(); es = null } }
+  function cancel() { if (es) { es.close(); es = null } }
   return { send, delta, done, cancel }
 }
