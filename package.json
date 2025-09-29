@@ -1,0 +1,62 @@
+{
+  "name": "nuxt-gemini",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "description": "A Nuxt 4 module that makes Gemini API usage stupid-simple (Developer API & Vertex AI).",
+  "keywords": [
+    "nuxt",
+    "nuxt4",
+    "module",
+    "gemini",
+    "google",
+    "genai",
+    "ai",
+    "sse",
+    "vertex"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YOUR_GH_USERNAME/nuxt-gemini.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YOUR_GH_USERNAME/nuxt-gemini/issues"
+  },
+  "homepage": "https://github.com/YOUR_GH_USERNAME/nuxt-gemini#readme",
+  "exports": {
+    ".": "./dist/module.mjs",
+    "./runtime/*": "./dist/runtime/*",
+    "./types": "./dist/types.d.ts"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "pnpm -C playground dev || npm run _dev-fallback",
+    "_dev-fallback": "echo 'Open the example app later (playground not included in this starter).'",
+    "build": "module-builder build",
+    "stub": "module-builder stub",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "release": "semantic-release"
+  },
+  "peerDependencies": {
+    "nuxt": "^4.0.0"
+  },
+  "devDependencies": {
+    "@nuxt/kit": "^3.13.2",
+    "@nuxt/module-builder": "^1.0.2",
+    "typescript": "^5.5.4",
+    "eslint": "^9.9.0",
+    "@typescript-eslint/parser": "^8.5.0",
+    "@typescript-eslint/eslint-plugin": "^8.5.0",
+    "vitest": "^2.0.5",
+    "zx": "^8.1.6",
+    "semantic-release": "^24.0.0",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^10.0.7"
+  }
+}

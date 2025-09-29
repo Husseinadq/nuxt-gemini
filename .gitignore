@@ -1,0 +1,16 @@
+# Node
+node_modules
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# Build
+dist
+.nitro
+.nuxt
+
+# Logs
+*.log
+
+# Env
+.env*
