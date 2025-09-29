@@ -1,3 +1,5 @@
+import { useRuntimeConfig } from "#imports";
+import { ofetch as $fetch } from "ofetch";
 export function useGeminiChat() {
   const config = useRuntimeConfig();
   const delta = ref("");

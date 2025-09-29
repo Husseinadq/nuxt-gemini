@@ -1,3 +1,4 @@
+import { useRuntimeConfig, useFetch, ref } from "#imports";
 export function useGeminiGenerate() {
   const config = useRuntimeConfig();
   const pending = ref(false);

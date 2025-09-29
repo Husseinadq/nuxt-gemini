@@ -1,3 +1,4 @@
+import { useRuntimeConfig } from "#imports";
 export function useGeminiFiles() {
   const config = useRuntimeConfig();
   async function upload(file) {
